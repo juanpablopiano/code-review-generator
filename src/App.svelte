@@ -61,7 +61,7 @@
 
 <main>
   <h1>Code reviewer assigner</h1>
-  <div class="flex justify-center gap-3 w-full">
+  <div class="flex flex-col items-center sm:flex-row justify-center gap-3 w-full">
     <div class="w-96 h-96 bg-slate-400 relative">
       <div class="flex">
         <label class="w-full">
@@ -75,7 +75,7 @@
         </label>
         <button type="button" onclick={addDeveloper}>Add</button>
       </div>
-      <div class="p-4">
+      <div class="p-4 text-xl">
         <ul>
           {#each developers as developer}
             <li class="text-gray-900">{developer}</li>
@@ -88,7 +88,7 @@
       </div>
     </div>
     <div class="w-96 h-96 bg-slate-400">
-      <h2 class="text-gray-900">Reviewers</h2>
+      <h2 class="text-gray-900 text-2xl">Reviewers</h2>
       {#if developers.length < 3}
         <h3 class="text-gray-900">Add at least 3 developers to generate reviewers</h3>
       {:else}
